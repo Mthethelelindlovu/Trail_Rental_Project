@@ -1,0 +1,35 @@
+﻿// See https://aka.ms/new-console-template for more information
+
+Console.WriteLine("TRAILER RENTALS");
+// declaring variables
+const int dailCost = 200;
+// int distTravelled;
+int numbDays;
+const int amountPerKilometre = 10;
+int distanceTravelled;
+double amountDue;
+
+// entering all the necessary information
+Console.WriteLine("Enter the distance travelled: ");
+int distTravelled = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter the amount per kilometre: ");
+int amountKilo = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter the number of days: ");
+int numDays = Convert.ToInt32(Console.ReadLine());
+
+//performing calculation if the distance travelled is less than 50 kilometres
+if (distTravelled < 50)
+{
+    amountDue = ((distTravelled * amountKilo) + (numDays * dailCost)) + 0.05 * (distTravelled * amountKilo) + (numDays * dailCost);
+    Console.WriteLine("The amount due is, R" + amountDue);
+}
+
+
+// perfoming calculations if the distance travelled is more than 400 kilometres
+else if (distTravelled > 400)
+{
+    amountDue = (distTravelled * amountKilo) + (numDays * dailCost) - 0.12 * (distTravelled * amountKilo) + (numDays * dailCost);
+    Console.WriteLine("The amount due is, R" + amountDue);
+}
+
+
