@@ -7,6 +7,8 @@ const int dailCost = 200;
 int numbDays;
 const int amountPerKilometre = 10;
 int distanceTravelled;
+const discount = 0.12;
+const double additionalSurcharge = 0.05;
 double amountDue;
 
 // entering all the necessary information
@@ -22,7 +24,7 @@ int numDays = Convert.ToInt32(Console.ReadLine());
 
 if (distTravelled < 50)
 {
-    amountDue = ((distTravelled * amountKilo) + (numDays * dailCost)) + 0.05 * (distTravelled * amountKilo) + (numDays * dailCost);
+    amountDue = ((distTravelled * amountKilo) + (numDays * dailCost)) + additionalSurcharge * (distTravelled * amountKilo) + (numDays * dailCost);
     Console.WriteLine("The amount due is, R" + amountDue);
 }
 
@@ -31,7 +33,7 @@ if (distTravelled < 50)
 
 else if (distTravelled > 400)
 {
-    amountDue = (distTravelled * amountKilo) + (numDays * dailCost) - 0.12 * (distTravelled * amountKilo) + (numDays * dailCost);
+    amountDue = (distTravelled * amountKilo) + (numDays * dailCost) - discharge * (distTravelled * amountKilo) + (numDays * dailCost);
     Console.WriteLine("The amount due is, R" + amountDue);
 }
 
